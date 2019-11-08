@@ -5,6 +5,7 @@ import utils.LinkedListUtils;
 
 /**
  * Created by bumblebee on 2019/11/8.
+ * 反转一个单链表
  */
 public class No16 {
 

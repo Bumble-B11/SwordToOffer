@@ -5,6 +5,7 @@ import utils.LinkedListUtils;
 
 /**
  * Created by bumblebee on 2019/11/8.
+ * 求单链表的倒数第K个元素
  */
 public class No15 {
     public static void main(String[] args) {
