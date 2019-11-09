@@ -1,13 +1,13 @@
 package utils;
 
-import data.BinaryTreeNode;
+import data.TreeNode;
 
 /**
  * Created by bumblebee on 2019/11/9.
  */
 public class BinaryTreeUtils {
 
-    public static BinaryTreeNode createBinaryTreeByArray(Integer[] array, int index) {
+    public static TreeNode createBinaryTreeByArray(Integer[] array, int index) {
         if (array == null || index >= array.length) {
             return null;
         }
@@ -16,14 +16,14 @@ public class BinaryTreeUtils {
             return null;
         }
 
-        BinaryTreeNode root = new BinaryTreeNode(array[index]);
+        TreeNode root = new TreeNode(array[index]);
         root.left = createBinaryTreeByArray(array, index * 2 + 1);
         root.right = createBinaryTreeByArray(array, index * 2 + 2);
 
         return root;
     }
 
-    public static void preOrderTraversal(BinaryTreeNode root, TraversalCallback callback) {
+    public static void preOrderTraversal(TreeNode root, TraversalCallback callback) {
         if (root == null) {
             return;
         }
@@ -35,7 +35,7 @@ public class BinaryTreeUtils {
         preOrderTraversal(root.right, callback);
     }
 
-    public static void inOrderTraversal(BinaryTreeNode root, TraversalCallback callback) {
+    public static void inOrderTraversal(TreeNode root, TraversalCallback callback) {
         if (root == null) {
             return;
         }
@@ -47,7 +47,7 @@ public class BinaryTreeUtils {
         inOrderTraversal(root.right, callback);
     }
 
-    public static void postOrderTraversal(BinaryTreeNode root, TraversalCallback callback) {
+    public static void postOrderTraversal(TreeNode root, TraversalCallback callback) {
         if (root == null) {
             return;
         }
@@ -60,7 +60,7 @@ public class BinaryTreeUtils {
     }
 
     /*只有两棵二叉树完全相同才会返回true，否则返回false*/
-    public static boolean isSameBinaryTree(BinaryTreeNode n1, BinaryTreeNode n2) {
+    public static boolean isSameBinaryTree(TreeNode n1, TreeNode n2) {
         if (n1 == null && n2 == null) {
             return true;
         }
@@ -76,6 +76,6 @@ public class BinaryTreeUtils {
     }
 
     public interface TraversalCallback {
-        void onTraversal(BinaryTreeNode root);
+        void onTraversal(TreeNode root);
     }
 }
