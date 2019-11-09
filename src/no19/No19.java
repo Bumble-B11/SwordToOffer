@@ -11,7 +11,7 @@ public class No19 {
 
     public static void main(String[] args) {
         TreeNode root = BinaryTreeUtils.createBinaryTreeByArray(
-                new Integer[]{4, 2, 7, 1, 3, 6, 9}, 0
+                new Integer[]{4, 2, 7, 1, 3, 6, 9}
         );
 
         root = new No19().invertTree(root);

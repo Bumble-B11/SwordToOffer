@@ -14,10 +14,10 @@ public class No18 {
 
     public static void main(String[] args) {
         TreeNode rootA = BinaryTreeUtils.createBinaryTreeByArray(
-                new Integer[]{8, 8, 7, 9, 2, null, null, null, null, 4, 7}, 0);
+                new Integer[]{8, 8, 7, 9, 2, null, null, null, null, 4, 7});
 
         TreeNode rootB = BinaryTreeUtils.createBinaryTreeByArray(
-                new Integer[]{8, 9, 2}, 0);
+                new Integer[]{8, 9, 2});
 
         System.out.println(new No18().hasSubTree(rootA, rootB));
 
